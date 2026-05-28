@@ -1,47 +1,19 @@
 # Texcomment
+Texcomment is a VS Code extension for displaying LaTeX math snippets that programmers write inside source-code comments. 
 
-Texcomment is a VS Code extension for displaying LaTeX math snippets that programmers write inside source-code comments.
+## How It Works
+<img width="786" height="174" alt="texcomment" src="https://github.com/user-attachments/assets/f3933b10-a29a-408c-b922-c9fbd66fd7d7" />
 
-This first build provides the extension skeleton and a conservative editor experience:
+## How I Built This
+I built this with an AI. But, I wasn't blind to the entire process. The tool essentially checks for a local LaTeX installation on your computer, renders the LaTeX math expression snippet in a temporary document, converts that into an SVG and then pastes the SVG into VSCode with some decorations.
 
-- Toggle Texcomment from the editor title bar or command palette.
-- Detect `$...$` inline snippets and `$$...$$` display snippets inside common line and block comments.
-- Validate snippets for empty content, unmatched braces, unmatched brackets, nested dollar delimiters, unsupported environments, and document-level commands.
-- Check for `latex` and `dvisvgm` on the Extension Host path, then through platform command lookup, and prompt when required rendering tools are missing.
-- Render valid snippets to SVG previews with light and dark theme variants.
-- Visually replace inactive TeX snippets with rendered math while keeping the source clickable for editing.
-- Render display math with block-style previews that visually separate equations from surrounding source text.
-- Stay visually quiet while rendering is pending, so source comments do not flash temporary `TeX: ...` preview labels.
-- Show hover details and diagnostics without adding extra preview text above comments.
-- Hide inline previews when selected, while selected display math keeps source visible with a block preview.
+I've included the AGENTS.md file that I used to generate and work on this project. This file was not AI generated. But every line of code here is. I had to make some manual edits when I ran out of tokens.
 
-## Development
+## Bugs and Things I Don't Like:
+1. There's a delay when hovering between snippets, which causes one of the snippets to not render properly.
+2. The rendered math equations are quite small because VSCode won't let me change the height of a single line. It's also why only inline LaTeX expression are supported.
+3. The hover preview image covers the text right below it, which could be inconvenient.
+4. You need a LaTeX installation on your computer, the extension does search for it, and it works on Mac and Windows (presumably).
 
-Install dependencies:
 
-```sh
-npm install
-```
 
-Compile the extension:
-
-```sh
-npm run compile
-```
-
-Run type checking without writing output:
-
-```sh
-npm run check
-```
-
-## Rendering Requirements
-
-Texcomment currently renders through system commands. Both commands should be available from the VS Code Extension Host or the platform command lookup:
-
-```sh
-latex --version
-dvisvgm --version
-```
-
-MacTeX usually provides both tools. On Windows, Texcomment falls back to `where.exe`; on macOS and Linux, it falls back to the user's shell command lookup.
