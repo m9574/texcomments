@@ -2,7 +2,7 @@
 Texcomment is a VS Code extension for displaying LaTeX math snippets that programmers write inside source-code comments. 
 
 ## How It Works
-<img width="786" height="174" alt="texcomment" src="https://github.com/user-attachments/assets/f3933b10-a29a-408c-b922-c9fbd66fd7d7" />
+<img width="786" height="174" alt="texcomment" src="https://github.com/user-attachments/assets/a38c9aea-5fae-4327-90bc-1c2e145d0f9e" />
 
 ## How I Built This
 I built this with an AI. But, I wasn't blind to the entire process. The tool essentially checks for a local LaTeX installation on your computer, renders the LaTeX math expression snippet in a temporary document, converts that into an SVG and then pastes the SVG into VSCode with some decorations.
