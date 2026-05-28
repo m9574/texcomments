@@ -1,0 +1,72 @@
+{
+  "name": "texcomment",
+  "displayName": "Texcomment",
+  "description": "Render LaTeX math snippets written inside source-code comments directly in the editor.",
+  "version": "0.0.1",
+  "publisher": "texcomment",
+  "license": "UNLICENSED",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:texcomment.toggle",
+    "onCommand:texcomment.refresh"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "texcomment.toggle",
+        "title": "Toggle Texcomment",
+        "category": "Texcomment",
+        "icon": "$(symbol-operator)"
+      },
+      {
+        "command": "texcomment.refresh",
+        "title": "Refresh Texcomment",
+        "category": "Texcomment",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "texcomment.toggle",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "texcomment.toggle"
+        },
+        {
+          "command": "texcomment.refresh"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Texcomment",
+      "properties": {
+        "texcomment.enabledByDefault": {
+          "type": "boolean",
+          "default": true,
+          "description": "Controls whether Texcomment starts enabled before the user toggles the editor command."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "check": "tsc --noEmit -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/vscode": "^1.120.0",
+    "typescript": "^6.0.3"
+  }
+}
