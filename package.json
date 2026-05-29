@@ -1,6 +1,6 @@
 {
-  "name": "texcomment",
-  "displayName": "Texcomment",
+  "name": "texcomments",
+  "displayName": "Texcomments",
   "description": "Render LaTeX math snippets written inside source-code comments directly in the editor.",
   "version": "0.0.1",
   "publisher": "kangm",
