@@ -16,4 +16,12 @@ I've included the AGENTS.md file that I used to generate and work on this projec
 4. You need a LaTeX installation on your computer, the extension does search for it, and it works on Mac and Windows (presumably).
 
 
+## Local Development
+``cd /path/to/texcomment``
+
+``npm install``
+
+``npm run compile``
+
+``code --extensionDevelopmentPath=/path/to/texcomment``
 

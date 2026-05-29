@@ -3,7 +3,7 @@
   "displayName": "Texcomment",
   "description": "Render LaTeX math snippets written inside source-code comments directly in the editor.",
   "version": "0.0.1",
-  "publisher": "texcomment",
+  "publisher": "kangm",
   "license": "UNLICENSED",
   "engines": {
     "vscode": "^1.90.0"
@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@types/node": "^25.9.1",
-    "@types/vscode": "^1.120.0",
+    "@types/vscode": "1.90.0",
     "typescript": "^6.0.3"
   }
 }
