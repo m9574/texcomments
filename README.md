@@ -18,4 +18,3 @@ I've included the AGENTS.md file that I used to generate and work on this projec
 2. The rendered math equations are quite small because VSCode won't let me change the height of a single line. It's also why only inline LaTeX expression are supported.
 3. The hover preview image covers the text right below it, which could be inconvenient.
 4. You need a LaTeX installation on your computer, the extension does search for it, and it works on Mac and Windows (presumably).
-
