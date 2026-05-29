@@ -1,4 +1,4 @@
-# Texcomment
+# Texcomments
 Texcomment is a VS Code extension for displaying LaTeX math snippets that programmers write inside source-code comments. 
 
 ## How It Works
