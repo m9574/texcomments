@@ -2,7 +2,7 @@
   "name": "texcomments",
   "displayName": "Texcomments",
   "description": "Render LaTeX math snippets written inside source-code comments directly in the editor.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "kangm",
   "license": "UNLICENSED",
   "engines": {
